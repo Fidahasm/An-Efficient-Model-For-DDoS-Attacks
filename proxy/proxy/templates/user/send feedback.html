@@ -1,0 +1,19 @@
+{% extends 'user/index_user.html' %}
+{% block body %}<form id="form1" name="form1" method="post" action="/send_feedback_post">
+
+<table width="228" border="1" class="table table-striped">
+
+    <tr>
+    <td width="218">Feedback
+      <label>
+        <input type="text" name="textfield" required/>
+      </label></td>
+  </tr>
+  <tr>
+    <td><label> </label>
+        <div align="center">
+          <input type="submit" name="Submit" value="send" class="btn btn-dark" />
+      </div></td>
+  </tr>
+</table>
+{% endblock %}

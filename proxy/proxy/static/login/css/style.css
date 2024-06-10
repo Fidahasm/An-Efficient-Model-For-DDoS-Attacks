@@ -1,0 +1,429 @@
+/*--
+    Author: W3layouts
+    Author URL: http://w3layouts.com
+    License: Creative Commons Attribution 3.0 Unported
+    License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+/*-- Reset Code --*/
+	html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+	article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+	ol,ul{list-style:none;padding:0;margin:0;}
+	blockquote,q{quotes:none;}
+	blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+	table{border-collapse:collapse;border-spacing:0;}
+	a{text-decoration:none;}
+	.txt-rt{text-align:right;}
+	.txt-lt{text-align:left;}
+	.txt-center{text-align:center;}
+	.float-rt{float:right;}
+	.float-lt{float:left;}
+	.clear{clear:both;}
+	.pos-relative{position:relative;}
+	.pos-absolute{position:absolute;}
+	.vertical-base{vertical-align:baseline;}
+	.vertical-top{vertical-align:top;}
+	.underline{	padding-bottom:5px;	border-bottom:1px solid #eee;margin:0 0 20px 0;}
+	nav.vertical ul li{display:block;}
+	nav.horizontal ul li{display: inline-block;}
+	img{max-width:100%;}
+/*-- Reset Code --*/
+
+body {
+     background:url("../images/login-img.jpg");
+	 background-repeat:no-repeat;
+	 background-attachment:fixed;
+	 background-position:center;
+	 background-size:cover;
+	 -webkit-background-size:cover;
+	 -moz-background-size:cover;
+	 -o-background-size:cover;
+	 -ms-background-size:cover;
+	font-family: 'Raleway', sans-serif;
+}
+h1 {
+	font-size: 60px;
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 2px;
+	color:#E1E6E7; 
+    margin: 57px 0px;
+	margin-bottom: 19px;
+}
+.form-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+	display:-webkit-flex;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+}
+ form {
+	background-color:rgba(0, 0, 0, 0.75);
+	padding: 10px 10px;
+	width: 28%;
+}
+.form-info {
+	margin-bottom: 19px;
+    padding: 10px;
+}
+.form-info h2 {
+    font-size: 38px;
+    font-weight: 600;
+	padding: 27px 0px;
+	color:#E0E7E7;
+	letter-spacing: 3px;
+	padding-bottom: 10px;
+}
+label {
+    width: 19%;
+    height: 3px;
+    display: block;
+	background-color:#CCD7D7;
+}
+.email-w3l {
+    padding: 10px 7px;
+	position: relative;
+}
+.pass-w3l {
+    padding: 10px;
+	position: relative;
+}
+.email-w3l .email:hover,.pass-w3l .pass:hover ,.email-w3l .email:focus,.pass-w3l .pass:focus{
+	border-bottom:1px dotted;
+}
+.email-w3l .email,.pass-w3l .pass {
+    width: 87%;
+	padding: 19px 26px;
+	border: none;
+    outline: none;
+    border-bottom: 1px solid #e0e7e7;
+	background:none;
+	color:#E0E7E7;
+}
+input[placeholder] {
+    font-size: 17px;
+	letter-spacing: 2px;
+}
+input::placeholder {
+	color:#99A8A7;
+}
+span.i1 {
+    position: absolute;
+    top: 28px;
+    left: 12px;
+}
+span.i1 i ,span.i2 i{
+        color:#A2CCC7;	
+}
+span.i2 {
+	position: absolute;
+    top: 28px;
+    left: 15px;
+}
+.submit-agileits {
+    padding: 28px 10px;
+}
+.submit-agileits .login {
+	font-size: 17px;
+    font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	background-color:#e1e6e7;
+	color:#2b292a;
+	border: none;
+	width: 100%;
+    padding: 16px;
+	outline: none;
+	transition:0.7s;
+	cursor: pointer;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+.form-check {
+    margin-bottom: 10px;
+}
+.left {
+    float: left;
+    width: 43%;
+	margin: 15px 0;
+	padding: 10px;
+	color:#E2E6E7;
+	letter-spacing: 1px;
+	font-family: 'Raleway', sans-serif;
+}
+.right {
+    float: right;
+    width: 34%;
+	padding: 13px;
+	margin: 15px 0;
+	letter-spacing: 1px;
+	font-family: 'Raleway', sans-serif;
+}
+.right a {
+	color:#cfc6cb;
+	transition: 1s;
+}
+.right a:hover {
+	color:#f2fad7;
+	text-decoration:underline;
+}
+.submit-agileits .login:hover {
+    background-color:#2b292a;
+    color: #e1e6e7;
+}
+
+.clear {
+       clear:both;	
+}
+footer {
+    text-align: center;
+	color:#fff;
+	margin: 61px 0px;
+    letter-spacing: 3px;
+    font-size: 15px;
+    font-weight: 500;
+}
+footer a {
+	color:#E1E6E7;
+	transition: 1s;
+}
+footer a:hover {
+	color:#f2fad7;
+	text-decoration:underline;
+}
+
+/*--responsive--*/
+@media screen and (max-width: 1440px){
+	h1 {
+    font-size: 57px
+}
+	form {
+    width: 31%;
+}
+}
+@media screen and (max-width: 1366px){
+	.right {
+    width: 40%;
+}
+}
+
+@media screen and (max-width: 1280px){
+	.right {
+    width: 43%;
+}
+}
+
+@media screen and (max-width: 1080px){
+	.form-content form {
+	width: 34%;	
+}
+	.email-w3l .email, .pass-w3l .pass {
+    width: 84%;
+}
+footer {
+    margin: 51px 0px;
+}
+} 
+
+@media screen and (max-width: 1024px){
+	.form-content form {
+    width: 40%;
+}
+}
+
+@media screen and (max-width: 991px){
+	.email-w3l .email, .pass-w3l .pass {
+    width: 86%;
+}
+.right {
+    width: 39%;
+}
+}
+
+@media screen and (max-width: 900px){
+	h1 {
+    font-size: 57px;
+}
+	.form-content form {
+    width: 43%;
+}
+}
+
+@media screen and (max-width: 800px){
+	.form-content form {
+    width: 49%;
+}
+}
+
+@media screen and (max-width: 768px){
+	h1 {
+	margin-bottom: 43px;
+}
+	.form-content form {
+    width: 51%;
+}
+}
+
+@media screen and (max-width: 736px){
+	h1 {
+    font-size: 52px;
+}
+	.form-content form {
+	width: 55%;
+}
+}
+
+@media screen and (max-width: 667px){
+	h1 {
+    margin: 38px 0px;
+    font-size: 47px;
+}
+.form-content form {
+    width: 60%;
+}
+footer {
+    letter-spacing: 1px;
+}
+}
+
+@media screen and (max-width: 640px){
+	h1 {
+    font-size: 47px;
+}
+	.form-content form {
+    width: 61%;
+}
+footer {
+    letter-spacing: 2px;
+}
+}
+
+@media screen and (max-width: 600px){
+	.form-content form {
+    width: 68%;
+}
+.form-info h2 {
+    padding: 16px 0px;
+}
+footer {
+    line-height: 21px;
+}
+}
+
+@media screen and (max-width: 568px){
+	h1 {
+    font-size: 43px;
+	margin: 28px 0px;
+}
+	.form-content form {
+    width: 72%;
+}
+	.form-info h2 {
+    padding: 10px 0px;
+}
+	footer {
+    margin: 28px 0px;
+}
+}
+
+@media screen and (max-width: 480px){
+	h1 {
+    font-size: 37px;
+}
+	.form-content form {
+    width: 83%;
+}
+	.form-info h2 {
+    font-size: 28px;
+}
+	footer {
+    letter-spacing: 1px;
+    font-size: 17px;
+	line-height: 28px;
+}
+}
+
+@media screen and (max-width: 414px){
+	h1 {
+    font-size: 31px;
+}
+	.form-content form {
+    width: 91%;
+}
+	.form-info {
+    margin-bottom: 7px;
+}
+	.submit-agileits .login {
+    padding: 13px;
+}
+	.right {
+    width: 42%;
+}
+	footer {
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+}
+
+@media screen and (max-width: 384px){
+	.form-info h2 {
+    font-size: 28px;
+}
+	.form-info {
+    margin-bottom: 0px;
+}
+	.form-check {
+    margin-bottom: 10px;
+}
+	.left {
+    text-align: center;
+	width: 94%;
+}
+	.right {
+    width: 87%;
+    text-align: center;
+}
+}
+
+@media screen and (max-width: 375px){
+	h1 {
+    font-size: 28px;
+}
+	.submit-agileits .login {
+    padding: 10px;
+}
+}
+
+@media screen and (max-width: 320px){
+	h1 {
+    font-size: 24px;
+    margin: 19px 0px;
+}
+	.form-info h2 {
+    padding: 2px 0px;
+    font-size: 25px;
+}
+	.email-w3l .email, .pass-w3l .pass {
+    width: 80%;
+	padding-bottom: 7px;
+}
+	input[placeholder] {
+    font-size: 14px;
+}
+	.submit-agileits {
+    padding-bottom: 10px;
+}
+	.left {
+    width: 90%;
+}
+	footer {
+    letter-spacing: 1px;
+    font-size: 12px;
+	margin: 19px 0px;
+}
+}

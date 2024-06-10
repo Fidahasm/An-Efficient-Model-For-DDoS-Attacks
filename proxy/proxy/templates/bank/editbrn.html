@@ -1,0 +1,58 @@
+{% extends 'bank/index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/edit_branch">
+  <table width="200" border="1" class="table table-striped">
+    <tr>
+      <td width="68" >Name</td>
+      <td width="116"><label>
+        <input type="text" name="textfield"  value="{{ val.name }}"required pattern="[A-Z a-z.]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Place</td>
+      <td><label>
+        <input type="text" name="textfield2"  value="{{ val.place}}"pattern="[A-Z a-z.]{3,25}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>Post</td>
+      <td><label>
+        <input type="text" name="textfield3"  value="{{ val.post }}"pattern="[A-Z a-z.]{3,25}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>Pin</td>
+      <td><label>
+        <input type="text" name="textfield4"  value="{{ val.pin }}" required pattern="[0-9]{6}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td><label>
+        <input type="text" name="textfield5"  value="{{ val.phone }}"  required pattern="[6789][0-9]{9}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>IFSC code </td>
+      <td><label>
+        <input type="text" name="textfield6"  value="{{ val.IFSC}}" required  pattern="^[A-Z]{4}0[A-Z0-9]{6}$" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>email</td>
+      <td><label>
+        <input type="text" name="textfield7"  value="{{ val.email }}" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" />
+      </label></td>
+    </tr>
+
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input name="Add" type="submit" id="Add" value="Edit" class="btn btn-success"/>
+          </div>
+      </label></td>
+    </tr>
+  </table>
+  <div align="center"></div>
+</form>
+{% endblock %}

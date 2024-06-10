@@ -1,0 +1,21 @@
+{% extends 'user/index_user.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" class="table table-striped">
+    <tr class="table table-dark">
+      <td>Branch</td>
+      <td>Phone</td>
+      <td>Request Status</td>
+    </tr>
+      {% for i in val %}
+    <tr>
+      <td>&nbsp;{{ i.BRANCH.name }}</td>
+      <td>&nbsp;{{ i.BRANCH.phone }}</td>
+      <td>{{ i.status }}</td>
+
+
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

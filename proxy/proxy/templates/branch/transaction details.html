@@ -1,0 +1,42 @@
+{% extends 'branch/index_branch.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/transaction_details_search#about">
+  <table width="200" border="1"class="table table-striped">
+    <tr>
+        <td><label>Name:  {{ name }}
+
+
+        <br />
+        IFSC:   {{ ifsc }}</label></td>
+      <td colspan="5">Account no:
+        <label>
+        <input type="text" name="textfield"  required  />
+             <input type="submit" name="Submit" value="search" class="btn btn-dark" />
+        </label>
+        </td>
+    </tr>
+    <tr class="table table-dark">
+      <td>datetime</td>
+      <td>type</td>
+      <td>amount</td>
+      <td>description</td>
+        <td>Account No</td>
+    </tr>
+     {% for i in val %}
+    <tr>
+      <td>{{ i.date }}</td>
+      <td>{{ i.Type }}</td>
+      <td>{{ i.Amount }}</td>
+      <td>{{ i.Transaction_type }}</td>
+       <td>{{ i.ACC_NO.Account_No }}</td>
+    </tr>
+       {% endfor %}
+
+    <tr>
+      <td colspan="5"><label>
+        <div align="center"><a href="/update#about" class="btn btn-dark"> Add New</a></div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'branch/index_branch.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/add_update">
+  <table width="200" border="1"class="table table-striped">
+    <tr>
+      <td>Type
+        <label>
+        <select name="select">
+
+            <option>credit</option>
+             <option>debit</option>
+        </select>
+        </label></td>
+    </tr>
+   <tr>
+      <td>Transaction Type
+        <label>
+        <select name="select2">
+
+            <option>online</option>
+             <option>offline</option>
+
+        </select>
+        </label></td>
+    </tr>
+   <tr>
+      <td>Account No
+        <label>
+        <select name="select3">
+            {% for i in val2 %}
+            <option value="{{ i.id }}">{{ i.Account_No }}</option>{% endfor %}
+        </select>
+        </label></td>
+    </tr>
+    <tr>
+      <td>Amount
+        <label>
+        <input type="text" name="textfield" />
+      </label></td>
+    </tr>
+    <tr>
+      <td><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Save"  class="btn btn-dark" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

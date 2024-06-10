@@ -1,0 +1,40 @@
+{% extends 'bank/index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="manage_branch_search#about">
+  <table width="354" height="168" border="1" class="table table-striped">
+    <tr>
+      <td colspan="7">Name
+        <label>
+        <input type="text" name="textfield" value="{{ Name }}"/>
+      </label>
+        <label>
+        <input name="Go" type="submit" id="Go" value="Go" class="btn btn-dark"/>
+      </label></td>
+    </tr>
+    <tr class="table table-dark">
+      <td >SI No </td>
+      <td >Name</td>
+      <td >Address</td>
+      <td >IFSC</td>
+      <td >Email</td>
+      <td >Phone</td>
+      <td>&nbsp;</td>
+    </tr>
+      {% for i in val %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{ i.name }}</td>
+      <td>{{ i.place }}{{ i.post }}{{ i.pin }}</td>
+      <td>{{ i.IFSC }}</td>
+      <td>{{ i.email }}</td>
+      <td>{{ i.phone }}</td>
+      <td><p><a href="edit_details/{{ i.id }}#about" class="btn btn-primary">Edit</a></p>
+      <p><a href="/delete_branch/{{ i.id }}" class="btn btn-danger">Delete</a></p></td>
+    </tr>
+       {% endfor %}
+    <tr>
+      <td colspan="7"><div align="center"><a href="add_details#about" class="btn btn-success">Add</a></div></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

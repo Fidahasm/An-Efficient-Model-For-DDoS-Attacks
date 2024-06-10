@@ -1,0 +1,42 @@
+{% extends 'branch/index_branch.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="accept_user_search#about">
+  <table width="354" height="168" border="1"class="table table-striped">
+    <tr>
+      <td colspan="7">Name
+        <label>
+          <input type="text" name="textfield" required pattern="[A-Z a-z.]" value="{{ name }}"/>
+          </label>
+          <label>
+          <input name="Go" type="submit" id="Go" value="Go" class="btn btn-dark" />
+        </label></td>
+    </tr>
+    <tr class="table table-dark">
+      <td width="24">SI No </td>
+      <td width="37">Name</td>
+      <td width="51">Address</td>
+      <td width="34">IFSC</td>
+      <td width="33">Email</td>
+      <td width="38">Phone</td>
+      <td width="54">&nbsp;</td>
+    </tr>
+
+      {% for i in val %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>&nbsp;{{ i.USER.first_name }} {{ i.USER.last_name }}</td>
+      <td>{{ i.USER.place }}</td>
+      <td>{{ i.BRANCH.IFSC }}</td>
+      <td>{{ i.BRANCH.email }}</td>
+      <td>{{ i.USER.phone }}</td>
+        {% if i.status == 'pending' %}
+      <td><p><a href="allocation/{{ i.USER.id }}/{{ i.id }}#about" class="btn btn-success">Accept</a></p>
+          <p><a href="rejection/{{ i.id }}" class="btn btn-danger">Reject</a></p></td>
+    {% else %}
+    <td>{{ i.status }}</td>
+    {% endif %}
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

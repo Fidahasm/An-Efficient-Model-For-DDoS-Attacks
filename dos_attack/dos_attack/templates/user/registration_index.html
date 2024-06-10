@@ -1,0 +1,124 @@
+{% load static %}
+<html lang="en">
+<head>
+<title>Reg</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Softball Registration Form Widget Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- font files -->
+<link href="//fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
+<!-- /font files -->
+<!-- css files -->
+<link href="../static/registration/css/style.css" rel='stylesheet' type='text/css' media="all" />
+<!-- /css files -->
+<link href="../static/registration/css/wickedpicker.css" rel="stylesheet" type='text/css' media="all" />
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+	<div class="w3-banner-main">
+		<div class="center-container">
+			<h1 class="header-w3ls">Registration Form</h1>
+			<div class="content-top">
+				<div class="content-w3ls">
+					<div class="form-w3ls">
+						<form action="Register_post" method="post" enctype="multipart/form-data">
+							<div class="content-wthree1">
+								<div class="grid-agileits1">
+									<div class="form-control" align="center">
+										<label class="header">First Name </label>
+										<input type="text" id="name" name="textfield" placeholder="" title="Please enter your Full Name" required patter="[A-Z a-z.]{3,25}">
+									</div>
+                                    <div class="form-control">
+										<label class="header">Last Name </label>
+										<input type="text" id="name" name="textfield2" placeholder="" title="Please enter your Full Name"required pattern="[A-Z a-z.]{3,25}" >
+									</div>
+                                    <div class="form-control">
+										<label class="header">photo </label>
+										<input type="file" id="name" name="file2" placeholder="" title="Please enter your Full Name" required="">
+									</div>
+                                    <div class="form-control">
+										<label class="header">Place </label>
+										<input type="text" id="name" name="textfield3" placeholder="" title="Please enter your Full Name"pattern="[A-Z a-z.]{3,25}">
+									</div>
+                                     <div class="form-control">
+										<label class="header">DOB </label>
+										<input type="date" id="name" name="textfield4" placeholder="" title="Please enter your Full Name" required="">
+									</div>
+
+                                    <div class="form-control">
+										<label class="header">Phone </label>
+										<input type="text" id="name" name="textfield5" placeholder="" title="Please enter your Full Name" required pattern="[6789][0-9]{9}">
+									</div>
+                                    <div class="grid-w3layouts1">
+									<div class="w3-agile1">
+										<label class="rating">Choose gender </label>
+										<ul>
+											<li>
+												<input type="radio" id="a-option" value="male" name="radio">
+												<label for="a-option">Male </label>
+												<div class="check"></div>
+											</li>
+											<li>
+												<input type="radio" id="b-option" value="female" name="radio">
+												<label for="b-option">Female</label>
+												<div class="check"><div class="inside"></div></div>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+									<div class="form-control">	
+										<label class="header">email </label>
+										<input type="email" id="email" name="email" placeholder="" title="Please enter a Valid Email Address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}">
+									</div>
+                                     <div class="form-control">
+										<label class="header">Id Proof </label>
+										<input type="file" id="name" name="file3" placeholder="" title="Please enter your Full Name" required="">
+									</div>
+                                     <div class="form-control">
+										<label class="header">Signature </label>
+										<input type="file" id="name" name="file" placeholder="" title="Please enter your Full Name" required="">
+									</div>
+                                    <div class="form-control">
+										<label class="header">Username </label>
+										<input type="text" id="name" name="textfield6" placeholder="" title="Please enter your Full Name" required="">
+									</div>
+                                    <div class="form-control">
+										<label class="header">Password </label>
+										<input type="password" id="name" name="textfield7" placeholder="" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  required="">
+									</div>
+                                    <div >
+
+
+									  <input type="submit" value="Registration">
+									  </form>
+                    </div>
+
+
+								</div>
+							</div>
+					</div>
+
+					<div class="clear"></div>
+				</div>
+
+	</div>
+
+<!-- Calendar -->
+				<link rel="stylesheet" href="./static/registration/css/jquery-ui.css" />
+				<script src="./static/registration/js/jquery-ui.js"></script>
+				  <script>
+						  $(function() {
+							$( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker();
+						  });
+				  </script>
+			<!-- //Calendar -->
+			<script type="text/javascript" src="./static/registration/js/wickedpicker.js"></script>
+			<script type="text/javascript">
+				$('.timepicker').wickedpicker({twentyFour: false});
+			</script>
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends 'bank/index.html' %}
+{% block body %}
+
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1">
+    <tr>
+      <td><div align="center"><a href="/manage_branch">manage branch</a></div></td>
+    </tr>
+    <tr>
+      <td><div align="center"><a href="/reports">view report</a></div></td>
+    </tr>
+    <tr>
+      <td><div align="center"><a href="/users">view users</a></div></td>
+    </tr>
+    <tr>
+      <td><div align="center"><a href="/complaints">view complaint</a></div></td>
+    </tr>
+{#    <tr>#}
+{#      <td><div align="center"><a href="/replys">send reply</a></div></td>#}
+{#    </tr>#}
+    <tr>
+      <td><div align="center"><a href="/feedbacks">view feedback</a></div></td>
+    </tr>
+    <tr>
+      <td><div align="center"><a href="/logout">logout</a></div></td>
+    </tr>
+  </table>
+</form>
+{% endblock  %}

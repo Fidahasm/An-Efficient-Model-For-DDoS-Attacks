@@ -1,0 +1,30 @@
+{% extends 'bank/index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="reports_search#about">
+  <table width="268" height="194" border="1" class="table table-striped">
+    <tr>
+      <td colspan="4">Date
+        <label>
+        <input type="date" name="textfield" required />
+        <input name="Go" type="submit" id="Go" value="Go" class="btn btn-dark" />
+      </label></td>
+    </tr>
+    <tr class="table table-dark">
+      <td width="47" height="53">SI NO </td>
+      <td width="71">Branch</td>
+      <td width="71">Report</td>
+      <td width="51">Date</td>
+    </tr>
+       {% for i in val %}
+    <tr>
+      <td height="47"> {{ forloop.counter }}</td>
+      <td>{{ i.BRANCH.name }}</td>
+      <td>&nbsp;<a href="{{ i.report }}" download=""> {{ i.report }}</a></td>
+      <td>{{ i.date }}</td>
+    </tr>
+       {% endfor %}
+  </table>
+</form>
+{% endblock %}
+
+

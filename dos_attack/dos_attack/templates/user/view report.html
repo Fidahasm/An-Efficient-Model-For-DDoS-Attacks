@@ -1,0 +1,26 @@
+{% extends 'user/index_user.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="268" height="194" border="1" class="table table-striped">
+    <tr>
+      <td colspan="4">Date
+        <label>
+        <input type="date" name="textfield" required />
+        <input name="Go" type="submit" id="Go" value="Go" class="btn btn-dark"/>
+      </label></td>
+    </tr>
+    <tr class="table table-dark">
+      <td width="47" height="53">SI NO </td>
+      <td width="71">Banch</td>
+      <td width="71">Report</td>
+      <td width="51">Date</td>
+    </tr>
+    <tr>
+      <td height="47">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

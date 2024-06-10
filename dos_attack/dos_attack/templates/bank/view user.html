@@ -1,0 +1,38 @@
+{% extends 'bank/index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/usersearch#about">
+  <table width="405" height="262" border="1" class="table table-striped">
+    <tr>
+      <td colspan="8">Branch
+        <label>
+        <select name="select">{% for j in val2 %}
+            <option value="{{ j.id }}">{{ j.name }}</option>{% endfor %}
+        </select>
+        <input type="submit" name="Submit" value="Go"  class="btn btn-dark"/>
+      </label></td>
+    </tr>
+    <tr class="table table-dark">
+      <td>SI.NO</td>
+      <td><div align="left">Name</div></td>
+      <td><div align="center">Phone</div></td>
+      <td><div align="center">Address</div></td>
+      <td><div align="center">Gender</div></td>
+      <td><div align="center">DOB</div></td>
+      <td><div align="center">Idproof</div></td>
+      <td>Account Number&nbsp;</td>
+    </tr>
+      {% for i in val %}
+    <tr>
+      <td> {{ forloop.counter }}</td>
+      <td>{{ i.USER.first_name }}{{ i.USER.last_name }}</td>
+      <td>{{ i.USER.phone }}</td>
+      <td>{{ i.USER.place }}{{ i.pin }}</td>
+      <td>{{ i.USER.gender }}</td>
+      <td>{{ i.USER.dob }}</td>
+      <td><a href="{{ i.USER.idproof  }}" download=""> {{ i.USER.idproof  }}</a></td>
+      <td>{{ i.Account_No }}</td>
+    </tr>
+       {% endfor %}
+  </table>
+</form>
+{% endblock %}

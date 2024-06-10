@@ -1,0 +1,34 @@
+{% extends 'branch/index_branch.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/allocation_post">
+  <table width="266" border="1" class="table table-striped">
+    <tr>
+      <td width="256">Account No
+        <label>
+        :
+        <input type="text" name="textfield" required pattern="^[0-9]{9,18}$" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>Balance
+        <label>
+        <input type="text" name="textfield2"  required pattern="[0-9]"/>
+        </label></td>
+    </tr>
+    <tr>
+      <td>pin
+        <label>
+        <input type="text" name="textfield3"required pattern="[0-9]{6}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Allocate" class="btn btn-dark" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}
+

@@ -1,0 +1,29 @@
+{% extends 'user/index_user.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/view_account_details_search#about">
+  <table width="268" height="194" border="1" class="table table-striped">
+    <tr>
+      <td colspan="4">Branch
+        <label>
+        <input type="text" name="textfield" required pattern="[A-Z a-z.]" value="{{ name }}"/>
+        <input name="Go" type="submit" id="Go" value="Go"class="btn btn-dark" />
+      </label></td>
+    </tr>
+    <tr class="table table-dark">
+      <td width="47" >Acc no </td>
+      <td width="71">pin</td>
+      <td width="71">balance</td>
+        <td width="71">branch</td>
+
+    </tr>
+      {% for i in val %}
+    <tr>
+      <td>&nbsp;{{ i.Account_No }}</td>
+      <td>{{ i.pin_num }}</td>
+      <td>{{ i.Balance }}</td>
+      <td>{{ i.BRANCH.name }}</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'branch/index_branch.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/report_post">
+  <table width="337" border="1"class="table table-striped">
+    <tr>
+         <td width="509">Date:
+        <label>
+        <input type="date" name="textfield1" required/>
+        </label></td>
+     </tr>
+      <tr>
+      <td width="509" >Report:
+        <label>
+        <input type="file" name="textfield2"  required />
+        </label></td>
+    </tr>
+    <tr>
+      <td><label>
+        <div align="center">
+          <input name="Send" type="submit" id="Send" value="Send" class="btn btn-secondary"  />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

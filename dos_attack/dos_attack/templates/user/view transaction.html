@@ -1,0 +1,39 @@
+{% extends 'user/index_user.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="view_transaction_search#about">
+  <table width="300" border="1" class="table table-striped">
+    <tr>
+      <td colspan="4">Date:
+        <label>
+        <input type="date" name="textfield"  required/>
+      </label>
+      <label>
+      
+        <div align="left">
+          <input type="submit" name="Submit" value="Search"class="btn btn-success" />
+          </div>
+      </label></td>
+    </tr>
+    <tr class="table table-dark">
+
+      <td width="66">Acc_no</td>
+      <td width="168">Amount</td>
+        <td width="168">Type</td>
+        <td width="168">Date</td>
+    </tr>
+      {% for i in val %}
+    <tr>
+      <td>{{ i.ACC_NO.Account_No }}</td>
+
+      <td>&nbsp;{{ i.Amount }}</td>
+          <td>&nbsp;{{ i.Type }}</td>
+        <td>{{ i.date }}</td>
+
+
+
+    </tr>
+      {% endfor %}
+  </table>
+  <div align="center"></div>
+</form>
+{% endblock %}

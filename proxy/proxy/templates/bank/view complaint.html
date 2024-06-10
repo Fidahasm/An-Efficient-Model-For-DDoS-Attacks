@@ -1,0 +1,42 @@
+{% extends 'bank/index.html' %}
+{% block body %}
+
+<form id="form1" name="form1" method="post" action="complaints_search#about">
+  <table width="600" border="1" class="table table-striped">
+    <tr>
+      <td colspan="5">Date:
+        <label>
+        <input type="date" name="textfield" required />
+      </label>
+        <label>
+        <input type="submit" name="Submit" value="Go" class="btn btn-dark" />
+      </label></td>
+    </tr>
+    <tr class="table table-dark">
+      <td width="23">SI No: </td>
+          <td width="35">User</td>
+      <td width="35">Complaint</td>
+
+      <td width="35">Date</td>
+      <td width="80">Reply</td>
+    </tr>
+      {% for i in val %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+         <td>{{i.USER.first_name}} {{i.USER.last_name}}</td>
+         <td>{{i.complaint }}</td>
+
+
+      <td>{{ i.date }}</td>
+      <td>
+          {% if i.reply == "pending" %}
+          <a href="replys/{{ i.id }}">Reply</a>
+          {% else %}
+          {{ i.reply }}
+          {% endif %}
+      </td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

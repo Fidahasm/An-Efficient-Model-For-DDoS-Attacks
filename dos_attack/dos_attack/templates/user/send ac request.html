@@ -1,0 +1,27 @@
+{% extends 'user/index_user.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="265" border="1" class="table table-striped">
+    <tr class="table table-dark">
+      <td width="37">Name</td>
+      <td width="51">Address</td>
+      <td width="38">Phone</td>
+      <td width="33">Email</td>
+      <td width="34">IFSC</td>
+         <td width="34"></td>
+    </tr>
+      {% for i in val %}
+    <tr>
+      <td>&nbsp;{{ i.name }}</td>
+      <td>&nbsp;{{ i.place }}</td>
+      <td>&nbsp;{{ i.phone }}</td>
+      <td>&nbsp;{{ i.email }}</td>
+      <td>{{ i.IFSC }}</td>
+        <td width="32" ><a href="send_acc_req/{{ i.id }}" class="btn btn-dark">Send Request</a></td>
+
+    </tr>
+
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

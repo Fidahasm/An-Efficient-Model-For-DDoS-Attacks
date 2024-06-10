@@ -1,0 +1,32 @@
+{% extends 'branch/index_branch.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="220" border="1"class="table table-striped">
+    <tr>
+      <td width="210">From_id:
+        <label>
+        <input type="text" name="textfield" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>To_id:
+        <label>
+        <input type="text" name="textfield2" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>Amount:
+        <label>
+        <input type="text" name="textfield3" required pattern="[0-9]" />
+      </label></td>
+    </tr>
+    <tr>
+      <td><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Submit" class="btn btn-dark"/>
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

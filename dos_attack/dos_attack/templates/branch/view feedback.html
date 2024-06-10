@@ -1,0 +1,32 @@
+{% extends 'branch/index_branch.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="view_feedback_search#about">
+  <table width="239" border="1"class="table table-striped">
+    <tr>
+      <td colspan="4">Date
+        <label>
+        <input type="date" name="textfield" required />
+      </label>
+        <label>
+        <input type="submit" name="Submit" value="Go" class="btn btn-dark"/>
+      </label></td>
+    </tr>
+    <tr class="table table-dark">
+      <td >SI NO </td>
+      <td >User</td>
+      <td >Feedback</td>
+        <td >Date</td>
+    </tr>
+       {% for i in val %}
+
+    <tr>
+         <td>{{ forloop.counter }}</td>
+      <td>{{i.USER.first_name}}</td>
+      <td>{{i.feedback }}</td>
+      <td>{{ i.date }}</td>
+    </tr>
+      {% endfor %}
+
+  </table>
+</form>
+{% endblock %}

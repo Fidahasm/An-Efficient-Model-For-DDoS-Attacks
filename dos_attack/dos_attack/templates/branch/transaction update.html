@@ -1,0 +1,28 @@
+{% extends 'branch/index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="246" border="1"class="table table-striped">
+    <tr>
+      <td colspan="4">Account No:
+        <label>
+        <input type="text" name="textfield" required pattern="^[0-9]{9,18}$" />
+        <input type="submit" name="Submit" value="Go" class="btn btn-dark" />
+      </label></td>
+    </tr>
+    <tr class="table table-dark">
+      <td width="80">Username</td>
+      <td width="39">Date</td>
+      <td width="45">IFSC</td>
+      <td width="54" rowspan="2"><a href="/update" class="btn btn-dark">Update</a></td>
+    </tr>
+       {% for i in val %}
+
+    <tr>
+      <td>{{i.USER.first_name}}</td>
+      <td>&nbsp;{{ i.date }}</td>
+      <td>&nbsp;</td>
+    </tr>
+       {% endfor %}
+  </table>
+</form>
+{% endblock %}

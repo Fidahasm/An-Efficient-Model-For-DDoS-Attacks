@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form2" name="form2" enctype="multipart/form-data" method="post" action="/Register_post">
+<table width="271" border="1">
+  <tr>
+    <td width="59">First Name </td>
+    <td width="196"><label>
+      <input type="text" name="textfield"required pattern="[A-Z a-z.]{3,25}"  />
+    </label></td>
+  </tr>
+  <tr>
+    <td>Last Name </td>
+    <td><label>
+      <input type="text" name="textfield2"required pattern="[A-Z a-z.]{3,25}" />
+    </label></td>
+  </tr>
+  <tr>
+    <td>Photo</td>
+    <td><
+      <label>
+        <input type="file" name="file2" />
+        </label>
+    </td>
+  </tr>
+  <tr>
+    <td>Place</td>
+    <td><label>
+      <input type="text" name="textfield3"pattern="[A-Z a-z.]{3,25}" />
+    </label></td>
+  </tr>
+  <tr>
+    <td>DOB</td>
+    <td><label>
+      <input type="text" name="textfield4" />
+    </label></td>
+  </tr>
+  <tr>
+    <td>Phone</td>
+    <td><label>
+      <input type="text" name="textfield5"required pattern="[6789][0-9]{9}" />
+    </label></td>
+  </tr>
+     <tr>
+      <td>Gender : Male
+        <label>
+          <input name="radio" type="radio" value="male" />
+          Female
+          <input name="radio" type="radio" value="female" />
+        </label></td>
+    </tr>
+
+  <tr>
+    <td>Email</td>
+    <td><label>
+      <input type="text" name="textfield7" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" />
+    </label></td>
+  </tr>
+  <tr>
+    <td>Id proof </td>
+    <td><label>
+      </label>
+      <form id="form3" name="form3" enctype="multipart/form-data" method="post" action="">
+        <label>
+          <input type="file" name="file3" />
+        </label>
+      </form>
+    <label></label></td>
+  </tr>
+  <tr>
+    <td>Signature</td>
+    <td><label></label>
+      <form id="form1" name="form1" enctype="multipart/form-data" method="post" action="">
+        <label>
+          <input type="file" name="file" />
+        </label>
+      </form>    </td>
+  </tr>
+     <tr>
+      <td>Username
+        <label>
+        <input type="text" name="textfield6" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>Password
+        <label>
+        <input type="text" name="textfield7"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  />
+      </label></td>
+    </tr>
+    <tr>
+      <td><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Sign up" />
+          </div>
+      </label></td>
+    </tr>
+  <tr>
+    <td colspan="2"><label>
+        <div align="center">
+          <input name="Add" type="submit" id="Add" value="register" />
+      </div>
+      </label></td>
+  </tr>
+</table>
+</body>
+</html>
